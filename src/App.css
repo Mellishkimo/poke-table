@@ -1,0 +1,113 @@
+Table {
+  border: 2px solid #dee2e6;
+  color: #5d5d5d;
+  margin: auto;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 90%;
+}
+
+th {
+  border: 1px solid #dee2e6;
+  border-bottom: 0px solid #dee2e6 !important;
+  min-width: 100px;
+}
+
+.sortableTh {
+  border: 1px solid #dee2e6;
+  border-bottom: 0px solid #dee2e6 !important;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.typeTh {
+  border: 1px solid #dee2e6;
+  border-bottom: 0px solid #dee2e6 !important;
+  min-width: 107.5px;
+}
+
+.pokeTd {
+  border: 1px solid #dee2e6;
+}
+
+.hpTd {
+  background-color: #00ff00;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.atkTd {
+  background-color: #ff3300;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.defTd {
+  background-color: #33ccff;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.speedTd {
+  background-color: #ffff00;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.specialTd {
+  background-color: #cc66ff;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.totalTd {
+  background-color: #ffaa00;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+.avgTd {
+  background-color: #ff80bf;
+  border: 1px solid #dee2e6;
+  color: black;
+  font-weight: bold;
+}
+
+p {
+  color: #5d5d5d;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-right: 9px;
+  padding-bottom: 0px;
+}
+
+.filterRow {
+  display: flex;
+  margin: auto;
+  padding-top: 10px;
+  width: 90%;
+}
+
+.sortableDiv {
+  padding-right: 15px;
+}
+
+.nameFilter {
+  font-size: 15px;
+  margin-top: 2.4px;
+  margin-right: 46px;
+  width: 170px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-right: 7px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
