@@ -1,5 +1,7 @@
+import Spr_1b_001 from '../images/Spr_1b_001.png'
+
 export const pokemonStats = [
-    { entry: 1, name: 'Bulbasaur', stage: 'Basic', type: 'Grass/Poison', hp: '45', attack: '49', defense: '49', special: '65', speed: '45', image: 'https://archives.bulbagarden.net/media/upload/a/a3/Spr_1b_001.png' },
+    { entry: 1, name: 'Bulbasaur', stage: 'Basic', type: 'Grass/Poison', hp: '45', attack: '49', defense: '49', special: '65', speed: '45', image: Spr_1b_001 },
     { entry: 2, name: 'Ivysaur', stage: 'Stage 1', type: 'Grass/Poison', hp: '60', attack: '62', defense: '63', special: '80', speed: '60', image: 'https://archives.bulbagarden.net/media/upload/5/58/Spr_1b_002.png' },
     { entry: 3, name: 'Venusaur', stage: 'Stage 2', type: 'Grass/Poison', hp: '80', attack: '82', defense: '83', special: '100', speed: '80', image: 'https://archives.bulbagarden.net/media/upload/f/f6/Spr_1b_003.png' },
     { entry: 4, name: 'Charmander', stage: 'Basic', type: 'Fire', hp: '39', attack: '52', defense: '43', special: '50', speed: '65', image: 'https://archives.bulbagarden.net/media/upload/9/9d/Spr_1b_004.png' },
