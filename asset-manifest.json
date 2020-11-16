@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/poke-table/static/css/main.40723ff6.chunk.css",
-    "main.js": "/poke-table/static/js/main.d107a8a9.chunk.js",
-    "main.js.map": "/poke-table/static/js/main.d107a8a9.chunk.js.map",
+    "main.js": "/poke-table/static/js/main.a52fced7.chunk.js",
+    "main.js.map": "/poke-table/static/js/main.a52fced7.chunk.js.map",
     "runtime-main.js": "/poke-table/static/js/runtime-main.05d95b9d.js",
     "runtime-main.js.map": "/poke-table/static/js/runtime-main.05d95b9d.js.map",
     "static/js/2.a2a0d173.chunk.js": "/poke-table/static/js/2.a2a0d173.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.05d95b9d.js",
     "static/js/2.a2a0d173.chunk.js",
     "static/css/main.40723ff6.chunk.css",
-    "static/js/main.d107a8a9.chunk.js"
+    "static/js/main.a52fced7.chunk.js"
   ]
 }
