@@ -20,7 +20,7 @@ const Title = () => {
                 <h1 style={{ color: '#ffde00' }}>Yellow</h1>
             </Col>
             <Col>
-                <h1 style={{ color: '#ffcb05' }}>Stat Table</h1>
+                <h1 style={{ color: '#ffcb05' }}>Base Stat Table</h1>
             </Col>
         </Row>
     )

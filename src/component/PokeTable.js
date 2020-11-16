@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Col, Row, Table } from 'reactstrap'
 
 import { pokemonStats } from '../data/pokemonData'
-import Spr_1b_001 from '../images/Spr_1b_001.png'
 import { statAverager, statTotaler, tableSorter } from '../utils'
 import SortArrows from './SortArrows'
 import { BugButton, 
