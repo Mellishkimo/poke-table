@@ -155,23 +155,11 @@ class PokeTable extends Component {
         this.filterTableRows)
     }
 
-    filterBasic = () => {
+    filterStage = (event) => {
         this.setState({
-            basicFilterActive: !this.state.basicFilterActive,
-        },
-        this.filterTableRows)
-    }
-
-    filterStage1 = () => {
-        this.setState({
-            stage1FilterActive: !this.state.stage1FilterActive,
-        },
-        this.filterTableRows)
-    }
-
-    filterStage2 = () => {
-        this.setState({
-            stage2FilterActive: !this.state.stage2FilterActive,
+            basicFilterActive: event.target.id === "basic",
+            stage1FilterActive: event.target.id === "stage1",
+            stage2FilterActive: event.target.id === "stage2"
         },
         this.filterTableRows)
     }
@@ -341,17 +329,20 @@ class PokeTable extends Component {
                 </Col>
                 <Col>
                     <BasicButton
-                        onClick={this.filterBasic}
+                        id="basic"
+                        onClick={this.filterStage}
                         selected={basicFilterActive}>
                             Basic
                     </BasicButton>
                     <Stage1Button
-                        onClick={this.filterStage1}
+                        id="stage1"
+                        onClick={this.filterStage}
                         selected={stage1FilterActive}>
                             Stage 1
                     </Stage1Button>
                     <Stage2Button
-                        onClick={this.filterStage2}
+                        id="stage2"
+                        onClick={this.filterStage}
                         selected={stage2FilterActive}>
                             Stage 2
                     </Stage2Button>
