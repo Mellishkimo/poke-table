@@ -50,6 +50,31 @@ class PokeTable extends Component {
         }
     }
 
+    clearAllFilters = () => {
+        document.getElementById('nameFilter').value = ''
+        this.setState({
+            bugFilterActive: false,
+            dragonFilterActive: false,
+            electricFilterActive: false,
+            fightingFilterActive: false,
+            fireFilterActive: false,
+            flyingFilterActive: false,
+            ghostFilterActive: false,
+            grassFilterActive: false,
+            groundFilterActive: false,
+            iceFilterActive: false,
+            normalFilterActive: false,
+            poisonFilterActive: false,
+            psychicFilterActive: false,
+            rockFilterActive: false,
+            waterFilterActive: false,
+            basicFilterActive: false,
+            stage1FilterActive: false,
+            stage2FilterActive: false
+        },
+        this.filterTableRows)
+    }
+
     filterBug = () => {
         this.setState({
             bugFilterActive: !this.state.bugFilterActive,
@@ -156,12 +181,27 @@ class PokeTable extends Component {
     }
 
     filterStage = (event) => {
-        this.setState({
-            basicFilterActive: event.target.id === "basic",
-            stage1FilterActive: event.target.id === "stage1",
-            stage2FilterActive: event.target.id === "stage2"
-        },
-        this.filterTableRows)
+        const { basicFilterActive, stage1FilterActive, stage2FilterActive } = this.state
+        if ((basicFilterActive) && (event.target.id === 'basic')) {
+            this.setState({ basicFilterActive: false },
+            this.filterTableRows)
+        }
+        else if ((stage1FilterActive) && (event.target.id === 'stage1')) {
+            this.setState({ stage1FilterActive: false },
+            this.filterTableRows)
+        }
+        else if ((stage2FilterActive) && (event.target.id === 'stage2')) {
+            this.setState({ stage2FilterActive: false },
+            this.filterTableRows)
+        }
+        else {
+            this.setState({
+                basicFilterActive: event.target.id === 'basic',
+                stage1FilterActive: event.target.id === 'stage1',
+                stage2FilterActive: event.target.id === 'stage2'
+            },
+            this.filterTableRows)
+        }
     }
 
     filterTableRows = () => {
@@ -346,6 +386,11 @@ class PokeTable extends Component {
                         selected={stage2FilterActive}>
                             Stage 2
                     </Stage2Button>
+                </Col>
+                <Col>
+                    <button className='clear-filters-btn' onClick={this.clearAllFilters}>
+                        Clear All Filters
+                    </button>
                 </Col>
             </Row>
             <Row className='filterRow'>
