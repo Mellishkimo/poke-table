@@ -269,3 +269,29 @@ export const Stage2Button = styled.button`
   cursor: pointer;
   background: ${props => props.selected ? '#d4af37' : 'white'};
 `
+
+export const RankSelect = {
+  container: (provided, state) => ({
+    ...provided,
+    margin: 'auto',
+    marginLeft: '10px',
+    marginTop: '17px',
+    width: '231px'
+  }),
+  indicatorSeparator: state => ({
+    display: 'none',
+  }),
+}
+
+export const ComparisonSelect = {
+  container: (provided, state) => ({
+    ...provided,
+    margin: 'auto',
+    marginLeft: '10px',
+    marginTop: '17px',
+    width: '137px'
+  }),
+  indicatorSeparator: state => ({
+    display: 'none',
+  }),
+}

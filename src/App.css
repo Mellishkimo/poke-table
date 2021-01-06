@@ -13,6 +13,11 @@ th {
   min-width: 100px;
 }
 
+p {
+  color: black;
+  font-weight: bold;
+}
+
 .sortableTh {
   border: 1px solid #dee2e6;
   border-bottom: 0px solid #dee2e6 !important;
@@ -31,55 +36,48 @@ th {
 }
 
 .hpTd {
-  background-color: #00ff00;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .atkTd {
-  background-color: #ff3300;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .defTd {
-  background-color: #33ccff;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .speedTd {
-  background-color: #ffff00;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .specialTd {
-  background-color: #cc66ff;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .totalTd {
-  background-color: #ffaa00;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
 .avgTd {
-  background-color: #ff80bf;
   border: 1px solid #dee2e6;
   color: black;
   font-weight: bold;
 }
 
-p {
+.filterLabel {
   color: #5d5d5d;
   font-size: 16px;
   font-weight: bold;
@@ -127,4 +125,106 @@ h1 {
   background-color: white;
   color: #5d5d5d;
   text-decoration: underline;
+}
+
+.pokeRow {
+  cursor: pointer;
+}
+
+.pokeRow:hover {
+  background-color: aliceblue;
+  text-decoration: underline;
+}
+
+.evolutionDetail {
+  font-size: 11px;
+}
+
+.statTitle {
+  margin-top: 9px;
+  margin-right: 25px;
+  min-width: 69.22px;
+}
+
+.statInt {
+  align-items: center;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  height: 34px;
+  min-width: 40px;
+}
+
+.rank {
+  margin-left: 30px;
+  margin-top: 9px;
+  margin-right: 25px;
+}
+
+.rankDetail {
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.rankRow {
+  display: flex;
+  height: 40px;
+  margin-top: 9px;
+}
+
+.keyBlock {
+  border: 1px solid black;
+  height: 17px;
+  margin-top: 0px;
+  margin-left: 23.5px;
+  margin-right: 5px;
+  min-width: 20px;
+}
+
+.keyText {
+  font-size: 11px;
+  font-style: italic;
+  margin-top: 1.5px;
+}
+
+.pokeLink {
+  font-size: 11px;
+}
+
+.spriteLink {
+  display: inline-grid;
+  text-align: center;
+  width: 65px;
+}
+
+.comparisonTitle {
+  margin: 0px;
+  width: 200px;
+}
+
+.comparisonDiff {
+  margin: 0px;
+}
+
+.pokeCol {
+  border: 2px solid;
+  border-radius: 6px;
+  margin-left: 25px;
+  min-height: 495px;
+  min-width: 380px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.versusHeader {
+  text-align: center;
+  margin-left: 78px;
+  margin-right: 78px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.displayImg {
+  width: 65px;
 }

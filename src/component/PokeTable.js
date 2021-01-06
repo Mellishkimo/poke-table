@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Col, Row, Table } from 'reactstrap'
+import { withRouter } from 'react-router-dom'
 
 import { pokemonStats } from '../data/pokemonData'
 import { statAverager, statTotaler, tableSorter } from '../utils'
@@ -250,6 +251,10 @@ class PokeTable extends Component {
         }
     }
 
+    moreInfo = ({ name }) => {
+        this.props.history.push(`/info/${name}`)
+    }
+
     sortAverage = () => {
         const { currentSort } = this.state
         let nextSort
@@ -359,13 +364,13 @@ class PokeTable extends Component {
             <React.Fragment>
             <Row className='filterRow'>
                 <Col>
-                    <p>Name Filter:</p>
+                    <p className='filterLabel'>Name Filter:</p>
                 </Col>
                 <Col>
                     <input id='nameFilter' className='nameFilter' onKeyUp={this.filterTableRows} placeholder='Enter a Pokémon name...' />
                 </Col>
                 <Col>
-                    <p>Evolution Filters:</p>
+                    <p className='filterLabel'>Evolution Filters:</p>
                 </Col>
                 <Col>
                     <BasicButton
@@ -395,7 +400,7 @@ class PokeTable extends Component {
             </Row>
             <Row className='filterRow'>
                 <Col>
-                    <p>Type Filters:</p>
+                    <p className='filterLabel'>Type Filters:</p>
                 </Col>
                 <Col>
                     <BugButton
@@ -541,21 +546,21 @@ class PokeTable extends Component {
                 <tbody>
                     {pokemonStats.sort(tableSorter[currentSort].fn).map((pokemon, i) => {
                         return (
-                            <tr key={i}>
-                                <td className='pokeTd'>{pokemon.entry}</td>
-                                <td className='pokeTd'>
+                            <tr className='pokeRow' key={i} onClick={this.moreInfo.bind(this, pokemon)}>
+                                <td className='pokeTd' title='Pokedex #'>{pokemon.entry}</td>
+                                <td className='pokeTd' title='Image'>
                                     <img src={pokemon.image} alt={pokemon.name} />
                                 </td>
-                                <td className='pokeTd'>{pokemon.name}</td>
-                                <td className='pokeTd'>{pokemon.type}</td>
-                                <td className='pokeTd'>{pokemon.stage}</td>
-                                <td className='hpTd'>{pokemon.hp}</td>
-                                <td className='atkTd'>{pokemon.attack}</td>
-                                <td className='defTd'>{pokemon.defense}</td>
-                                <td className='speedTd'>{pokemon.speed}</td>
-                                <td className='specialTd'>{pokemon.special}</td>
-                                <td className='totalTd'>{statTotaler(pokemon)}</td>
-                                <td className='avgTd'>{statAverager(pokemon)}</td>
+                                <td className='pokeTd' title='Name'>{pokemon.name}</td>
+                                <td className='pokeTd' title='Type'>{pokemon.type}</td>
+                                <td className='pokeTd' title='Stage'>{pokemon.stage}</td>
+                                <td className='hpTd' title='HP'>{pokemon.hp}</td>
+                                <td className='atkTd' title='Attack'>{pokemon.attack}</td>
+                                <td className='defTd' title='Defense'>{pokemon.defense}</td>
+                                <td className='speedTd' title='Speed'>{pokemon.speed}</td>
+                                <td className='specialTd' title='Special'>{pokemon.special}</td>
+                                <td className='totalTd' title='Total'>{statTotaler(pokemon)}</td>
+                                <td className='avgTd' title='Average'>{statAverager(pokemon)}</td>
                             </tr>
                         )
                     })}
@@ -566,4 +571,4 @@ class PokeTable extends Component {
     }
 }
 
-export default PokeTable
+export default withRouter(PokeTable)
